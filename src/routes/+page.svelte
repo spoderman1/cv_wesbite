@@ -4,7 +4,8 @@
     import animation from "$lib/animations/programming.json";
     import Versofy_home_2 from "$lib/images/versofy_2.jpg";
     import Versofy_home from "$lib/images/versofy_home.webp";
-    import { Button, Heading, Timeline, TimelineItem } from 'flowbite-svelte';
+    import { Button, Heading, Timeline, TimelineItem, Hr } from 'flowbite-svelte';
+    import { QuoteSolid } from 'flowbite-svelte-icons';
     import lottie from 'lottie-web';
     import { onMount } from 'svelte';
     import Keyword from "../components/Keyword.svelte";
@@ -17,6 +18,7 @@
     import Education from "../components/Education.svelte";
     import Profile from "../lib/images/pic.png";
     import Interests from "../components/Interests.svelte";
+    import Footer from "../components/Footer.svelte";
     /**
    * @type {HTMLDivElement}
    */
@@ -104,14 +106,18 @@
         </div>
     </div>
 </div>
-<hr>
+<Hr classHr="my-8 w-64 h-1" icon>
+    <QuoteSolid class="w-6 h-6 text-gray-700 dark:text-gray-300" />
+</Hr>
 <div class="about-me">
     <div class="about-me-heading">
         <h1 class="experience-heading" >About Me</h1>
     </div>
     <Terminal/>
 </div>
-<hr>
+<Hr classHr="my-8 w-64 h-1" icon>
+    <QuoteSolid class="w-6 h-6 text-gray-700 dark:text-gray-300" />
+  </Hr>
 <div class="experience-container">
     <div class="experience-heading">
         <Heading tag="h1" class="mb-4 text-white" customSize="text-4xl font-customMono  md:text-5xl lg:text-6xl">My Experience</Heading>
@@ -119,14 +125,19 @@
     <WholeTimeline/>
 </div>
 
-<hr/>
+<Hr classHr="my-8 w-64 h-1" icon>
+    <QuoteSolid class="w-6 h-6 text-gray-700 dark:text-gray-300" />
+  </Hr>
 <div class="education-container">
     <div class="experience-heading">Education</div>
     <Education/>
 </div>
-<hr>
+<Hr classHr="my-8 w-64 h-1" icon>
+    <QuoteSolid class="w-6 h-6 text-gray-700 dark:text-gray-300" />
+  </Hr>
 
 <Interests/>
+<Footer/>
 
 
 <style>
