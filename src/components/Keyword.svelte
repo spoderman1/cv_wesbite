@@ -50,6 +50,7 @@
         border-width: 1px;
         margin: 5px;
         padding-right: 10px;
+        background-color: white;
     }
 
     .keyword-icon {
@@ -63,5 +64,6 @@
         font-weight: bold;
         align-self: center;
         padding-top: 10px;
+        color: black;
     }
 </style>

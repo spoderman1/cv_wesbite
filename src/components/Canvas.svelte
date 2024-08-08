@@ -3,7 +3,7 @@
 
   import { onMount } from "svelte";
 
-    export let width = 400;
+    export let width = 500;
     export let height = 400;
     export let background = 'black';
     export let color = 'white';

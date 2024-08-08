@@ -5,6 +5,7 @@
     import TypingEffect from './TypingEffectTerminal.svelte';
 
     let typing_key = 0;
+    let terminal;
     let terminal_content_style = {
         'font-family': '"Courier New", Courier, monospace', 
         'color': '#20C20E',
@@ -18,7 +19,7 @@
     }
 </script>
 
-<div class="terminal">
+<div bind:this={terminal} class="terminal">
     <h2 class="terminal-title">{terminal_content_label}</h2>
         <div class="terminal-description-container">
             <TypingEffect key={typing_key} words={terminal_content} style={terminal_content_style}/>
@@ -35,6 +36,8 @@
         margin: 20px;
         border-radius: 10px;
         background-color: black;
+        border-color: white;
+        border-width: 2px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         width: 80%;
@@ -56,10 +59,8 @@
         border-radius: 10px;
         white-space: pre-wrap;    /* Preserve formatting like line breaks and spaces */
         overflow: auto;
-        width: 100%;
-        border-color: gray;
+        border-color: white;
         border-width: 1px;
-        min-height: 200px;
     }
 
     .terminal-description-text {
