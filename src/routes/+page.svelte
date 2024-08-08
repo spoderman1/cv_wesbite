@@ -14,6 +14,9 @@
     import Loom_2 from "../lib/images/loom2.png";
     import Canvas from "../components/Canvas.svelte";
     import WholeTimeline from "../components/WholeTimeline.svelte";
+    import Education from "../components/Education.svelte";
+    import Profile from "../lib/images/pic.png";
+    import Interests from "../components/Interests.svelte";
     /**
    * @type {HTMLDivElement}
    */
@@ -52,9 +55,6 @@
   }
 
     let starsContainer;
-
-
-
     let stars = [
     { top: '10%', left: '20%', size: '3px', duration: '2s' },
     { top: '15%', left: '80%', size: '2px', duration: '3s' },
@@ -83,24 +83,31 @@
     }
 
 </script>
-
+<div bind:this={starsContainer} class="backdrop">
+    {#each stars as star}
+    <div class="star" style="top: {star.top}; left: {star.left}; width: {star.size}; height: {star.size}; animation-duration: {star.duration};">
+    </div>
+    {/each}
+</div>
 <div class="container-profile">
     <div class="text-column">
-        <h1 class='main-heading'>Hi, I'm Talha</h1>
+        <h1 class="main-heading">Hi, I'm Talha</h1>
+        <TypingEffectHeading/>
+        <div class="image-box-profile">
+            <img src={Profile} alt="Profile Picture" width="200" height="200"/>
+        </div>
+
     </div>
     <div class="image-column">
         <div class="image-box-animation">
             <div bind:this={animationContainer}></div>
-        </div>
-        <div class="image-box-profile">
-               
         </div>
     </div>
 </div>
 <hr>
 <div class="about-me">
     <div class="about-me-heading">
-        <Heading tag="h1" class="mb-4" customSize="text-4xl font-customMono md:text-5xl lg:text-6xl">About Me</Heading>
+        <h1 class="experience-heading" >About Me</h1>
     </div>
     <Terminal/>
 </div>
@@ -111,30 +118,18 @@
     </div>
     <WholeTimeline/>
 </div>
+
 <hr/>
 <div class="education-container">
-    <div class="left-content">
-        <Heading tag="h1" class="mb-4 text-white" customSize="text-4xl font-customMono  md:text-5xl lg:text-6xl">Education</Heading>
-        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono  md:text-2xl lg:text-2xl">Masters in Computer Science</Heading>
-        <p class="mb-4 text-white">01/01/2024 - 01/12/2025</p>
-        <p class="mb-4 text-white">I'm currently pursuing my masters by Research in the field of Computer Science, specifically in Probabilistic Modelling and AI in multi agent systems to determine outcomes.</p>
-        <br/>
-        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono  md:text-2xl lg:text-2xl">Bachelors in Science in Information and Electrical Engineering</Heading>
-        <p class="mb-4 text-white">01/01/2017 - 01/12/2018</p>
-        <p class="mb-4 text-white">I completed my electrical engineering degree, with a greater emphasis on software, fundamentals of communications, networking, and design</p>
-        <br/>
-        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono  md:text-2xl lg:text-2xl">Bachelors in Engineering Science in Biomedical Electrical Engineering</Heading>
-        <p class="mb-4 text-white">01/01/2012 - 01/12/2016</p>
-        <p class="mb-4 text-white">I completed my degree in Biomedical Engineering, the degree gave me a foundation in both medicine and electrical engineering with subjects like electronics, microprocessors, anatomy, and physiology</p>
-    </div>
-    <div class="right-content">
-    </div>
+    <div class="experience-heading">Education</div>
+    <Education/>
 </div>
+<hr>
 
+<Interests/>
 
 
 <style>
-
     .main-heading {
         font-family: 'Courier New', Courier, monospace;
         color: white;
@@ -166,13 +161,14 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin: 20 auto;
+            margin-top: 50px;
             padding-left: 50px;
             padding-bottom: 20px;
     }
     .text-column {
         flex: 1;
         padding-right: 20px;
+        margin-top: 20px;
     }
 
     .btn-contact-me {
@@ -188,7 +184,7 @@
         flex-direction:column;
     }
     .image-box-profile {
-        flex: 1;
+        flex: 2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -210,14 +206,16 @@
 
     .experience-container {
         width: 80%;
-        margin: 30px;
+        margin: 50px;
         justify-content: flex-start;
     }
 
     .experience-heading {
-        align-items: "right";
-        margin-bottom: 40px;
-        font-family: 'Courier New', Courier, monospace; 
+        align-items: "center";
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 4em;
+        color: white; 
+        margin-bottom: 50px;
     }
 
     .timeline-container {
@@ -261,6 +259,7 @@
 
     .education-container {
         display: flex;
+        flex-direction: column;
         width: 100vw;
         box-sizing: border-box;
         padding: 20px;

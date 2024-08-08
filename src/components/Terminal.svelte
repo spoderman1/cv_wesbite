@@ -58,9 +58,8 @@
         padding: 1rem;            /* Padding around the text */
         border-radius: 10px;
         white-space: pre-wrap;    /* Preserve formatting like line breaks and spaces */
-        overflow: auto;
-        border-color: white;
         border-width: 1px;
+        width: 100%;
     }
 
     .terminal-description-text {

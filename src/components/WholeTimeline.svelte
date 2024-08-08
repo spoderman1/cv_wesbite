@@ -18,18 +18,39 @@
     }
 </script>
 
-
-    <Timeline>
-        <TimelineItem title={versofy.title} date={versofy.date}>
-          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
-        </TimelineItem>
-        <TimelineItem title={iress.title} date={iress.date}>
-          <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
-        </TimelineItem>
-        <TimelineItem title={kopano.title} date={kopano.date}>
-          <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
-        </TimelineItem>
-      </Timeline>
+<Timeline order="vertical">
+    <TimelineItem>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-2xl font-customMono md:text-2xl lg:text-2xl">{versofy.title}</Heading>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono md:text-1xl lg:text-1xl">{versofy.date}</Heading>
+        <p class="mb-4 text-white text-base font-customMono text-gray-500 dark:text-gray-400">{versofy.experience}</p>
+        <div class="keywords-container">
+            <Keyword description="React Native" icon="react"/>
+            <Keyword description="TypeScript" icon="typescript"/>
+            <Keyword description="Serverless" icon="serverless"/>
+            <Keyword description="AWS" icon="aws"/>
+        </div>
+    </TimelineItem>
+    <TimelineItem>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-2xl font-customMono md:text-2xl lg:text-2xl">{iress.title}</Heading>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono md:text-1xl lg:text-1xl">{iress.date}</Heading>
+        <p class="mb-4 text-white text-base font-customMono text-gray-500 dark:text-gray-400">{iress.experience}</p>
+        <div class="keywords-container">
+            <Keyword description="NodeJs" icon="node"/>
+            <Keyword description="Terraform" icon="terraform"/>
+            <Keyword description="AWS Lambda" icon="lambda"/>
+        </div>
+    </TimelineItem>
+    <TimelineItem>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-2xl font-customMono md:text-2xl lg:text-2xl">{kopano.title}</Heading>
+        <Heading tag="h1" class="mb-4 text-white" customSize="text-1xl font-customMono md:text-1xl lg:text-1xl">{kopano.date}</Heading>
+        <p class="mb-4 text-white text-base font-customMono text-gray-500 dark:text-gray-400">{kopano.experience}</p>
+        <div class="keywords-container">
+            <Keyword description="React" icon="react"/>
+            <Keyword description="ASP.Net" icon="asp"/>
+            <Keyword description="AWS" icon="aws"/>
+        </div>
+    </TimelineItem>
+</Timeline>
 
 
 <style>

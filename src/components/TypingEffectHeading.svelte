@@ -1,8 +1,10 @@
 <script>
-    import { fly, slide } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     import { onMount } from 'svelte';
+    import { Blockquote } from 'flowbite-svelte';
+    import { QuoteSolid } from 'flowbite-svelte-icons';
    
-    export let words = ['I can do Frontend...kinda', 'and Backend!', 'APIs', 'and Mobile Dev in React Native!', 'I am a Full Stack Engineer'];
+    export let words = ["I can do Frontend (kinda) and Backend! APIs, and Mobile Dev are a breeze! I am a Full-Stack Engineer"];
     let currentWordIndex = 0;
     let currentWord = '';
     let isWiping = false;
@@ -31,11 +33,8 @@
           index++;
         } else {
           clearInterval(typeInterval);
-          setTimeout(() => {
-            wipeWord();
-          }, 1000);
           }
-        }, 100);
+        }, 50);
     }
   
     function wipeWord() {
@@ -65,10 +64,13 @@
       font-size: 2rem;
       color: black;
       font-family: 'Courier New', Courier, monospace; 
+      min-height: 30%;
     }
   </style>
   
   
   <span class="word" transition:fly={{ y: 100, duration: 5000 }}>
-      {currentWord}
+      <Blockquote class="p-4 my-4 text-white">
+        {currentWord}
+      </Blockquote>
   </span>
