@@ -2,8 +2,6 @@
 // @ts-nocheck
 
     import animation from "$lib/animations/programming.json";
-    import Versofy_home_2 from "$lib/images/versofy_2.jpg";
-    import Versofy_home from "$lib/images/versofy_home.webp";
     import { Button, Heading, Timeline, TimelineItem, Hr } from 'flowbite-svelte';
     import { QuoteSolid } from 'flowbite-svelte-icons';
     import lottie from 'lottie-web';
@@ -11,9 +9,6 @@
     import Keyword from "../components/Keyword.svelte";
     import Terminal from "../components/Terminal.svelte";
     import TypingEffectHeading from "../components/TypingEffectHeading.svelte";
-    import Loom from "../lib/images/loom.jpg";
-    import Loom_2 from "../lib/images/loom2.png";
-    import Canvas from "../components/Canvas.svelte";
     import WholeTimeline from "../components/WholeTimeline.svelte";
     import Education from "../components/Education.svelte";
     import Profile from "../lib/images/pic.png";

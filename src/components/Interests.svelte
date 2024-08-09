@@ -3,13 +3,12 @@
     import Image_1 from "$lib/images/carousel/1.png";
     import Image_2 from "$lib/images/carousel/2.png";
     import Image_3 from "$lib/images/carousel/3.png";
-    import Image_4 from "$lib/images/carousel/4.png";
 
     const images = [
         {
-            alt: 'Samurai Cat',
+            alt: 'Starry night',
             src: Image_1,
-            title: 'samurai cat'
+            title: 'Starry night'
         },
         {
             alt: 'Japanese Turtle',
@@ -17,14 +16,9 @@
             title: 'Japanese Turtle'
         },
         {
-            alt: 'Samurai Cat',
+            alt: 'Coffee Cat',
             src: Image_3,
-            title: 'samurai cat'
-        },
-        {
-            alt: 'Samurai Cat',
-            src: Image_4,
-            title: 'samurai cat'
+            title: 'Coffee cat'
         },
     ]
     const interests = {
