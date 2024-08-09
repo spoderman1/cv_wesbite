@@ -177,12 +177,6 @@
         margin-top: 20px;
     }
 
-    .btn-contact-me {
-        align-self: center;
-        margin-top: 20px;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
     .image-column {
         flex: 1;
         padding-left: 20px;
@@ -203,13 +197,6 @@
         align-items: center;
     }
 
-    hr {
-        height: 1px;
-        background-color: cadetblue;
-        width: 60%;
-        margin: 0 auto;
-    }
-
     .experience-container {
         width: 80%;
         margin: 50px;
@@ -222,31 +209,6 @@
         font-size: 4em;
         color: white; 
         margin-bottom: 50px;
-    }
-
-    .timeline-container {
-        margin: 20px;
-        color: white;
-    }
-
-    .keywords-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    .timeline-screenshots-container {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .timeline-screenshots {
-        display: flex;
-        flex-direction: row;
-        margin: 20px;
-        width: 10em;
-        height: auto;
-        justify-content: space-between;
     }
 
     .about-me-heading {
@@ -270,39 +232,4 @@
         box-sizing: border-box;
         padding: 20px;
     }
-
-    .left-content {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.left-content h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-.left-content h2 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-}
-
-.left-content p {
-  margin-top: 20px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.right-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
 </style>

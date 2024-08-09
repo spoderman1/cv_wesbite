@@ -61,39 +61,6 @@
         border-width: 1px;
         width: 100%;
     }
-
-    .terminal-description-text {
-        font-family: 'Courier New', Courier, monospace; /* Monospaced font for bash script-like appearance */
-        color: #20C20E;              /* Darker text color */
-        font-size: 0.9rem;        /* Slightly smaller font size */
-        line-height: 1.5;         /* Spacing between lines */
-    }
-
-    .terminal-button-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .terminal-button {
-        padding: 10px 20px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #333;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: 'Courier New', Courier, monospace; 
-    }
-
-    .terminal-button:hover {
-        background-color: #555;
-    }
 </style>
 
 

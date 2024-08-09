@@ -32,6 +32,7 @@
 	"type": "module",
 	"dependencies": {
 		"@lottiefiles/svelte-lottie-player": "^0.3.1",
+		"@sveltejs/adapter-static": "^3.0.2",
 		"lottie-web": "^5.12.2"
 	}
 }

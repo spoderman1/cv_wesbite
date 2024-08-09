@@ -54,11 +54,6 @@
 
 
 <style>
-    .timeline-container {
-        margin: 20px;
-        color: white;
-    }
-
     .keywords-container {
         display: flex;
         flex-direction: row;
